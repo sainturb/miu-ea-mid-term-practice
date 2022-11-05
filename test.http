@@ -1,0 +1,39 @@
+
+###
+POST http://localhost:8080/books
+content-type: application/json
+
+{
+  "name": "book",
+  "publisher": {
+    "id": 1,
+    "name": "publisher"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Test"
+    }
+  ]
+}
+
+### Update
+
+PUT http://localhost:8080/books/1
+content-type: application/json
+
+{
+  "id": 1,
+  "name": "book1",
+  "order": null,
+  "publisher": {
+    "id": 1,
+    "name": "publisher"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Test"
+    }
+  ]
+}

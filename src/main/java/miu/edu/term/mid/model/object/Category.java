@@ -1,0 +1,26 @@
+package miu.edu.term.mid.model.object;
+
+
+import lombok.*;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
+public class Category {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+
+    @ManyToMany(mappedBy = "categories")
+    @ToString.Exclude
+    Set<Book> books = new HashSet<>();
+}
