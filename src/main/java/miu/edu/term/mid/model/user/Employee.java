@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @DiscriminatorValue("3")
 @Entity
@@ -12,6 +13,7 @@ import javax.persistence.Entity;
 @Setter
 @ToString
 @RequiredArgsConstructor
+@Table(name="emp")
 public class Employee extends Person {
 
 
